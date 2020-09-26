@@ -32,7 +32,7 @@ class Mail extends Mailable
     {
         return $this
             ->subject('業務報告'. Carbon::today()->toDateString() .$this->user->name)
-            ->to('test@sample.com')
+            ->to('@gmail.com')
             ->view('mails.content')
             ->with(
                 [

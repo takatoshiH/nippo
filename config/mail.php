@@ -66,6 +66,7 @@ return [
         'log' => [
             'transport' => 'log',
             'channel' => env('MAIL_LOG_CHANNEL'),
+            'from' => env('MAIL_TO_ADDRESS'),
         ],
 
         'array' => [

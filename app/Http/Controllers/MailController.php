@@ -18,7 +18,7 @@ class MailController extends Controller
 
         \App\Models\Mail::create(['user_id'=> Auth::user()->id]);
 
-        \Mail::send(new Mail($request->all(), Auth::user()))->from(Auth::user()->email);
+        \Mail::send(new Mail($request->all(), Auth::user()));
         return redirect()->route('home');
     }
 }
